@@ -1,0 +1,1 @@
+var config=require("../config");module.exports=function(i,o,e,f,r,t,a){var n=e/f,h=e/i,c=f/o;if(h>1||c>1)h>1&&(f=(e=i)/n),f>o&&(r==config.DOC_FIT_VIEW?e=(f=o)*n:a>0&&f/o<a&&(e=(f=o)*n));else if(r==config.DOC_FIT_VIEW){if(!t){var g=Math.max(h,c);e/=g,f/=g}}else f=(e=i)/n;return{width:Math.floor(e),height:Math.floor(f)}};

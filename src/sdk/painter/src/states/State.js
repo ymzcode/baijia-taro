@@ -1,0 +1,1 @@
+import object from"../util/object";export default class State{constructor(t,e){object.extend(this,t),this.emitter=e,this.state=!0}on(t,e){return this.emitter.on(t,e,!0),this}off(t,e){return this.emitter.off(t,e),this}destroy(){}draw(){}};

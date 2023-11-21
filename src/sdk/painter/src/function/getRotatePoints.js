@@ -1,0 +1,1 @@
+export default function(t,o,a,n){return n.map(function(n){return{x:Math.floor((n.x-t)*Math.cos(a)-(n.y-o)*Math.sin(a)+t),y:Math.floor((n.x-t)*Math.sin(a)+(n.y-o)*Math.cos(a)+o)}})};

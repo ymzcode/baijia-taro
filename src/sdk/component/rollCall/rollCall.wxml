@@ -1,0 +1,4 @@
+<view hidden="{{!showDialog}}" class='roll-call-dialog'>
+  <dialog showCancelBtn='{{showCancelBtn}}' content='{{content}}' confirmText='{{confirmText}}' bind:confirm='onDialogConfirm'>
+  </dialog>
+</view>

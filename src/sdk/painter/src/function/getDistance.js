@@ -1,0 +1,1 @@
+export default function(t,n,r,e){const o=r-t,u=e-n;return Math.sqrt(o*o+u*u)};

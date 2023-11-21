@@ -1,0 +1,1 @@
+export default{getOffsetX:(t,a,s)=>t+a*(16*Math.pow(Math.sin(s),3)),getOffsetY:(t,a,s)=>t-a*(13*Math.cos(s)-5*Math.cos(2*s)-2*Math.cos(3*s)-Math.cos(4*s))};

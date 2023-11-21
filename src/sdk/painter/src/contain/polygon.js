@@ -1,0 +1,1 @@
+import windingLine from"./windingLine";let EPSILON=1e-8;function isAroundEqual(n,i){return Math.abs(n-i)<EPSILON}export default function(n,i,r){var e=0,u=n[0];if(!u)return!1;for(var t=1;t<n.length;t++){var a=n[t];e+=windingLine(u.x,u.y,a.x,a.y,i,r),u=a}var o=n[0];return isAroundEqual(u.x,o.x)&&isAroundEqual(u.y,o.y)||(e+=windingLine(u.x,u.y,o.x,o.y,i,r)),0!==e};

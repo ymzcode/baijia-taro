@@ -1,0 +1,33 @@
+<div class="bjy-answer-result-student">
+    <div class="bjy-answer-result-options">
+        <div class="bjy-self-answer-tip">
+            {{language.ANSWER_SELF}}:
+        </div>
+        <div class="bjy-answer-option-container">
+            <div class="bjy-answer-options" wx:if="{{selectedOptions.length}}">
+                <span wx:for="{{selectedOptions}}" wx:if="{{index < 4}}" wx:key="index" class="bjy-answer-result-option {{!item.isRight && rightOptions.length ? ' bjy-answer-error' : ''}} {{isJudgement ? ' bjy-answer-option-judge' : ''}}">
+                    {{item.text}}
+                </span>
+            </div>
+            <div class="bjy-answer-options" wx:if="{{selectedOptions.length}}">
+                <span wx:for="{{selectedOptions}}" wx:if="{{index > 3}}" wx:key="index" class="bjy-answer-result-option {{!item.isRight && rightOptions.length ? ' bjy-answer-error' : ''}} {{isJudgement ? ' bjy-answer-option-judge' : ''}}">
+                    {{item.text}}
+                </span>
+            </div>
+            <div class="bjy-no-options-placeholder" wx:if="{{!selectedOptions.length}}">
+                {{language.NOT_JOIN_ANSWER}}
+            </div>
+        </div>
+    </div>
+
+    <div class="bjy-answer-result-right-options" wx:if="{{rightOptions.length}}">
+        <div class="bjy-right-answer-tip">
+            {{language.ANSWER_RIGHT}}:
+        </div>
+        <div class="bjy-answer-right-option-container">
+            <span wx:for="{{rightOptions}}" wx:key="index" class="bjy-answer-right-option">
+                {{item.text}}
+            </span>
+        </div>
+    </div>
+</div>

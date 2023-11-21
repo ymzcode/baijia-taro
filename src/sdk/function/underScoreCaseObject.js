@@ -1,0 +1,1 @@
+var $=require("../jquery"),underScoreCase=require("./underScoreCase");function underScoreCaseObject(e){var r=$.isArray(e)?[]:{};return $.each(e,function(e,c){($.isPlainObject(c)||$.isArray(c))&&(c=underScoreCaseObject(c)),r[underScoreCase(e)]=c}),r}module.exports=underScoreCaseObject;

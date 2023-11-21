@@ -1,0 +1,94 @@
+/* sdk/component/messageSticker.wxss */
+.bjy-sticky-button {
+  position: relative;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  margin-left: 2px;
+  margin-right: 5px;
+  display: inline-block;
+  min-width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fb0), to(#f60));
+  background-image: -webkit-linear-gradient(#fb0, #f60);
+  background-image: -moz- oldlinear-gradient(#fb0, #f60);
+  background-image: -o-linear-gradient(#fb0, #f60);
+  background-image: linear-gradient(#fb0, #f60);
+}
+
+.bjy-count-tip {
+  width: 16px;
+  height: 16px;
+  background: #ff1f49;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 16px;
+  position: absolute;
+  right: -11px;
+  top: -9px;
+  -webkit-transform: scale(.875);
+  -moz-transform: scale(.875);
+  -ms-transform: scale(.875);
+  -o-transform: scale(.875);
+  transform: scale(.875);
+}
+
+.bjy-sticky-message-simple {
+  padding: 7px 6px 10px 6px;
+  margin-bottom: 4px;
+  max-height: 52px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.bjy-sticky-message-panel {
+  z-index: 2;
+  background: #fff;
+  color: #333;
+}
+
+.bjy-sticky-message-panel .bjy-message-item {
+  padding: 6px 0;
+}
+
+.bjy-message-item .bjy-header {
+  color: #999;
+  display: flex;
+  line-height: 1.3;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.bjy-message-item .bjy-content {
+  width: 100%;
+  box-shadow: 0 0 0 1px rgb(176 190 197 / 10%);
+  border-radius: 0 8px 8px 8px;
+  background-color: #fff !important;
+  position: relative;
+  border-radius: 3px;
+  color: #333;
+  display: inline-block;
+  line-height: 1.5;
+  padding: 7px 10px;
+  transition-duration: .5s;
+  word-break: break-word;
+  font-size: 12px;
+}
+
+.bjy-sticky-message-footer {
+  width: 100%;
+  height: 32px;
+  text-align: center;
+}
+
+.bjy-sticky-message-footer image {
+  width: 32px;
+  height: 32px;
+}

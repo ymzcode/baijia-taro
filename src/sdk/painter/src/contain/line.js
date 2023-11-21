@@ -1,0 +1,1 @@
+export default function(t,r,e,n,u,a,f){if(!u)return!1;let i=u/2;if(a>t+i&&a>e+i||a<t-i&&a<e-i||f>r+i&&f>n+i||f<r-i&&f<n-i)return!1;if(t===e)return Math.abs(a-t)<=i;let o=(n-r)/(e-t),h=(t*n-e*r)/(t-e);return Math.pow(o*a-f+h,2)/(o*o+1)<=Math.pow(i,2)};

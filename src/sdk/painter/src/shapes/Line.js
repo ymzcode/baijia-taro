@@ -1,0 +1,1 @@
+import Shape from"./Shape";import getDistance from"../function/getDistance";export default class Line extends Shape{setLineStyle(t){t.setLineCap("square")}drawing(t,e,i,n,s,a){a(),(this.points||(this.points=[{x:e,y:i}]))[1]={x:n,y:s},this.draw(t)}validate(){const{points:t}=this;return t&&2===t.length}toJSON(){return super.toJSON({name:"Doodle"})}};

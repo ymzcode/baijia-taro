@@ -1,0 +1,1 @@
+export default function(){let{devicePixelRatio:e}=window;return e>2&&(e=2),e||1};

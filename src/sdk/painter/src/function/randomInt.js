@@ -1,0 +1,1 @@
+export default function(t){let o=Math.pow(10,t-1),a=Math.pow(10,t)-1;return o+Math.floor(Math.random()*(a-o))};

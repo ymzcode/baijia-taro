@@ -1,0 +1,30 @@
+<view class="content">
+    <view style="color: {{styleInfo.titleColor}};" class="content-title">
+        {{language.NOTICE}}
+    </view>
+    <view class="content-main"
+          style="color: {{styleInfo.contentColor}};background: {{styleInfo.contentBackground}}">
+        <text class="content-block">
+            {{content || defaultContent}}
+        </text>
+        <view wx:if="{{link}}">
+            链接:{{link}}
+        </view>
+    </view>
+
+    <view wx:if="{{groupContent}}">
+        <view style="color: {{styleInfo.titleColor}};"
+              class="content-title group-content-title">
+            {{language.GROUP_NOTICE}}
+        </view>
+        <view class="content-main"
+              style="color: {{styleInfo.contentColor}};background: {{styleInfo.contentBackground}}">
+            <text class="content-block">
+                {{groupContent}}
+            </text>
+            <view wx:if="{{groupLink}}">
+                链接:{{groupLink}}
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,1 @@
+exports.DEFAULT_CONTENT="暂无公告",exports.NOTICE="公告",exports.GROUP_NOTICE="通知",exports.DEFAULT_GROUP_CONTENT="暂无分组公告";

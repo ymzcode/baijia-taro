@@ -1,0 +1,1 @@
+export default function(t,e,h,i){let n,r,u,d;return t<h?(n=t,u=h-t):(n=h,u=t-h),e<i?(r=e,d=i-e):(r=i,d=e-i),{x:n,y:r,width:u,height:d}};

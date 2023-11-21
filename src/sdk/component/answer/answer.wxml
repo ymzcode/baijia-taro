@@ -1,0 +1,39 @@
+<view class="bjy-answer-student" wx:if="{{showAnswer}}">
+    <image class="bjy-answer-student-close" bindtap="hide" src="./img/close.svg"></image>
+    <div class="bjy-answer-student-body" wx:if="{{!showResult}}">
+        <div class="bjy-flex-row">
+            <div class="bjy-answer-countdown">
+                {{language.ANSWER_COUNTDOWN}}
+                <span class="bjy-answer-countdown-time">
+                    {{countDownTime || 0}}
+                </span>
+            </div>
+            <div class="bjy-answer-options-container {{isJudgement ? 'bjy-answer-center' : '' }}">
+                <div class="bjy-answer-options">
+                    <span wx:for="{{options}}" wx:key="index" wx-if="{{index < 4}}" class="bjy-answer-option {{isJudgement ? ' bjy-answer-option-big' : ''}} {{item.isActive ? ' active' : ''}} {{!canAnswer ? ' bjy-can-not-answer' : ''}}" data-index="{{index}}" bindtap="optionClick">
+                        {{item.text}}
+                    </span>
+                </div>
+                <div class="bjy-answer-options">
+                    <span wx:for="{{options}}" wx:key="index" wx-if="{{index > 3}}" class="bjy-answer-option {{isJudgement ? ' bjy-answer-option-big' : ''}} {{item.isActive ? ' active' : ''}} {{!canAnswer ? ' bjy-can-not-answer' : ''}}" data-index="{{index}}" bindtap="optionClick">
+                        {{item.text}}
+                    </span>
+                </div>
+            </div>
+
+            <div wx:if="{{canReset}}" class="bjy-answer-submit" bindtap="reset">
+                {{language.ANSWER_REEDIT}}
+            </div>
+            <div wx:else class="bjy-answer-submit {{locked ? 'locked' : ''}}" bindtap="submit">
+                {{language.ANSWER_SUBMIT_STUDENT}}
+            </div>
+        </div>
+        <div class="bjy-description" wx:if="{{description}}">
+            <span>{{language.ANSWER_DESCRIPTION}}：</span>
+            {{description}}
+        </div>
+    </div>
+    <div wx:else>
+        <answerResult options="{{options}}" isJudgement="{{isJudgement}}"></answerResult>
+    </div>
+</view>

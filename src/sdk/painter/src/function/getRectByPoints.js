@@ -1,0 +1,1 @@
+export default function(t){let{length:e}=t,x=0,y=0,l=0,f=0;if(e>0){let h=t[0];x=l=h.x,y=f=h.y;for(let i=1;i<e;i++)(h=t[i]).x<x?x=h.x:h.x>l&&(l=h.x),h.y<y?y=h.y:h.y>f&&(f=h.y)}return{x:x,y:y,width:l-x,height:f-y}};

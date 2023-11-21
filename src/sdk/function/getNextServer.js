@@ -1,0 +1,1 @@
+var $=require("../jquery");module.exports=function(r,e){var t=0;return $.each(r,function(r,n){if(n.ip===e.ip&&n.port===e.port)return t=r,!1}),t===r.length-1?t=0:t++,r[t]};

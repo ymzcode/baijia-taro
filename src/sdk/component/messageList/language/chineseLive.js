@@ -1,0 +1,1 @@
+exports.WHISPER_TITLE="私聊 ${userName}:",exports.ME="我",exports.STICKY_ICON="顶";

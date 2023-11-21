@@ -1,0 +1,1 @@
+var $=require("../jquery");function camelCase(e){return"string"!==$.type(e)&&(e=""+e),e.indexOf("_")>=0?(e=e.replace(/_/g,"-"),$.camelCase(e)):e}module.exports=camelCase;

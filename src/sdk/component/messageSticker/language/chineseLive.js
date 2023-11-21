@@ -1,0 +1,1 @@
+exports.ME="我",exports.STICKY_ICON="顶",exports.USER_ROLE_TEACHER="主讲",exports.USER_ROLE_ASSISTANT="助理",exports.STICKY_IMAGE_SIMPLE="置顶消息：[图片]";

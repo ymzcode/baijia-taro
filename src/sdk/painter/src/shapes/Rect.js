@@ -1,0 +1,1 @@
+import Polygon from"./Polygon";import getRect from"../function/getRect";export default class Rect extends Polygon{drawing(t,o,e,i,n,y){y();const g=this.points||(this.points=[]),r=getRect(o,e,i,n);g[0]={x:r.x,y:r.y},g[1]={x:r.x+r.width,y:r.y},g[2]={x:r.x+r.width,y:r.y+r.height},g[3]={x:r.x,y:r.y+r.height},this.draw(t)}toJSON(){return super.toJSON({name:"Polygon"})}};

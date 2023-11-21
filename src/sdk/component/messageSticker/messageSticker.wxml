@@ -1,0 +1,74 @@
+<template name="emoji">
+  <view wx:if="{{url}}">
+    <image src="{{url}}" style="width: 32px;height: 32px" mode="scaleToFill">
+    </image>
+  </view>
+  <view wx:if="{{!url}}">
+    不支持的表情
+  </view>
+</template>
+
+<template name="image">
+  <view>
+    <image src="{{url}}" bindtap="imageTap" data-src="{{url}}" data-width="{{width}}" data-height="{{height}}" mode='widthFix' style="width:100px;">
+    </image>
+  </view>
+</template>
+
+<template name="text">
+  <view>
+    <text>{{content}}</text>
+  </view>
+</template>
+
+<template name="link">
+  <view>
+    <navigator url="/page/window/window?url={{link}}" hover-class="navigator-hover">
+      {{content}}
+    </navigator>
+  </view>
+</template>
+
+<view class="bjy-sticky-message-panel" wx:if="{{canSticky && stickyData.length}}" data-fold="{{stickyFold ? 1 : 0}}">
+  <view wx:if="{{stickyFold}}" class="bjy-sticky-message-simple" bindtap="toggleFold">
+    <span class="bjy-sticky-button">
+      {{language.STICKY_ICON}}
+      <span wx-if="{{stickyData.length && stickyData.length > 1}}" class="bjy-count-tip">{{stickyData.length}}</span>
+    </span>
+    <span ref="stickSimple" class="bjy-content" style="font-size: 12px;">
+      <div wx:if="{{stickySimpleMessage && stickySimpleMessage.type == 'text'}}">
+        {{stickySimpleMessage.content}}
+      </div>
+      <div wx:if="{{stickySimpleMessage && stickySimpleMessage.type == 'emoji'}}">
+        <image src="{{stickySimpleMessage.url}}" style="width: 18px;height: 18px" mode="scaleToFill">
+        </image>
+      </div>
+      <div wx:if="{{stickySimpleMessage && stickySimpleMessage.type == 'image'}}">
+        {{language.STICKY_IMAGE_SIMPLE}}
+      </div>
+    </span>
+  </view>
+  <view wx:else bindtap="toggleFold">
+    <view class="bjy-sticky-message bjy-message-item" wx:for="{{stickyData}}" wx:key="index">
+      <div class="bjy-header">
+        <span class="bjy-sticky-button">
+          {{language.STICKY_ICON}}
+        </span>
+        <span class="bjy-name">
+          {{item.user.name}}
+        </span>
+        <span class="bjy-role" wx-if="{{item.user.role !== 'student'}}">
+          [{{item.user.localRole}}]
+        </span>
+      </div>
+      <div class="bjy-body">
+        <div class="bjy-content">
+          <template is="{{item.type}}" data="{{...item}}" />
+        </div>
+      </div>
+    </view>
+    <view class="bjy-sticky-message-footer">
+      <image src="./img/upward.png" alt="up"></image>
+    </view>
+  </view>
+</view>

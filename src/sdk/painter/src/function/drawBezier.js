@@ -1,0 +1,1 @@
+export default function(x,y){const e=y.length;if(!(e<2)){x.moveTo(y[0].x,y[0].y),x.lineTo(y[1].x,y[1].y);for(let o=1;o<e-2;o++){const e=.25,n=y[o],t=y[o-1],i=y[o+1],l=y[o+2],f={x:n.x+(i.x-t.x)*e,y:n.y+(i.y-t.y)*e},r={x:i.x-(l.x-n.x)*e,y:i.y-(l.y-n.y)*e};x.bezierCurveTo(f.x,f.y,r.x,r.y,i.x,i.y)}x.lineTo(y[e-1].x,y[e-1].y)}};

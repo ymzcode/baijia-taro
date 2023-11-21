@@ -1,0 +1,99 @@
+/* sdk/component/answer/answer.wxss */
+
+.bjy-answer-student {
+    width: 100%;
+    background: #fff;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.bjy-answer-student-close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.bjy-answer-student-body {
+    min-height: 35px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bjy-answer-options {
+    display: flex;
+}
+
+.bjy-answer-option {
+    margin: 5px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 16px;
+    color: #1795ff;
+    border: 1px solid;
+    background-color: #fff;
+    box-shadow: 0 0 2px 1px #1795ff;
+}
+
+.bjy-answer-option.active {
+    color: #fff;
+    background-color: #1795ff;
+    box-shadow: 0 5px 11px 0 rgba(142, 203, 255, 1), 0 0 8px 0 rgba(101, 197, 255, 0.46);
+}
+
+.bjy-answer-option.bjy-can-not-answer {
+    cursor: default;
+    box-shadow: none;
+}
+
+.bjy-flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bjy-answer-countdown {
+    margin-top: 5px;
+    min-width: 40px;
+}
+
+.bjy-answer-countdown-time {
+    font-size: 14px;
+    color: #1795ff;
+    margin-top: 5px;
+    display: block;
+}
+
+.bjy-answer-center {
+    flex: 1;
+}
+
+.bjy-answer-submit {
+    width: 69px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #1795ff;
+    margin-top: 5px;
+}
+
+.bjy-description {
+    width: 100%;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.bjy-answer-option-big {
+    margin-left: 20px;
+    padding: 0 5px;
+    width: auto;
+    border-radius: 5px;
+}

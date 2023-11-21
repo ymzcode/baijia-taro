@@ -1,0 +1,1 @@
+var sysInfo=wx.getSystemInfoSync(),model=sysInfo.model,system=sysInfo.system.toLowerCase();exports.isIphoneX=function(){return-1!==model.indexOf("iPhone X")},exports.isAndroid=function(){return-1!==system.indexOf("android")},exports.isPC=function(){var e=model.toLowerCase();return e.indexOf("win")>-1||"windows"==sysInfo.platform||e.indexOf("mac")>-1};

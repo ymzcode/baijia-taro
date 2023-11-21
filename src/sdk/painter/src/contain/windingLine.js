@@ -1,0 +1,1 @@
+export default function(r,t,e,n,u,f){if(f>t&&f>n||f<t&&f<n)return 0;if(n===t)return 0;var i=n<t?1:-1,a=(f-t)/(n-t);return 1!==a&&0!==a||(i=n<t?.5:-.5),a*(e-r)+r>u?i:0};

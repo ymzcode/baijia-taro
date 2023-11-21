@@ -1,0 +1,1 @@
+export default function(r){return"rgb("+(r>>16&255)+","+(r>>8&255)+","+(255&r)+")"};

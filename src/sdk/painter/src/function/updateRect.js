@@ -1,0 +1,1 @@
+export default function(t,h,i){return function(e,n){h<e?(t.x=h,t.width=e-h):(t.x=e,t.width=h-e),i<n?(t.y=i,t.height=n-i):(t.y=n,t.height=i-n)}};

@@ -1,0 +1,81 @@
+/* sdk/component/answer/answerResult/answerResult.wxss */
+
+.bjy-answer-right-option-container {
+    margin-left: 8px;
+    color: #000;
+}
+
+.bjy-answer-right-option + .bjy-answer-right-option {
+    margin-left: 3px;
+}
+
+.bjy-judgement-icon {
+    margin-right: 6px;
+}
+
+.bjy-right-answer-tip, .bjy-answer-right-option-container {
+    display: inline-block;
+}
+
+.bjy-answer-result-student .bjy-answer-option-container {
+    min-height: 80px;
+    align-items: center;
+    padding: 0;
+}
+
+.bjy-no-options-placeholder {
+    text-align: center;
+}
+
+.bjy-answer-result-options + .bjy-answer-result-right-options {
+    margin-top: 10px;
+}
+
+.bjy-right-answer-tip, .bjy-self-answer-tip {
+    font-size: 12px;
+    color: #000;
+}
+
+.bjy-right-answer-tip {
+    color: #b2b2b2;
+}
+
+.bjy-answer-option-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid rgb(236, 240, 242);
+    padding: 30px 20px;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+.bjy-answer-result-option {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    background-color: #1795ff;
+    border-radius: 40px;
+    color: #fff;
+    margin: 6px 6px 6px 0px;
+    box-shadow: 0 5px 10px 0 rgba(23, 149, 255, 0.3);
+}
+
+.bjy-answer-error {
+    background-color: #ff1f49;
+    box-shadow: 0px 5px 10px 0px rgba(255, 31, 73, 0.3);
+}
+
+.bjy-answer-option-judge {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    line-height: 64px;
+}

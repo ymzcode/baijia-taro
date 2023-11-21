@@ -1,0 +1,1 @@
+export default function(t,h){let i=Math.max(t.x,h.x),x=Math.max(t.y,h.y),a=Math.min(t.x+t.width,h.x+h.width),e=Math.min(t.y+t.height,h.y+h.height);if(a-i>=0&&e-x>=0)return{x:i,y:x,width:a-i,height:e-x}};

@@ -1,0 +1,1 @@
+export default function(t,e,h){return e>=t.x&&e<=t.x+t.width&&h>=t.y&&h<=t.y+t.height};

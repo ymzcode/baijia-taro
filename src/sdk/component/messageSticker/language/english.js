@@ -1,0 +1,1 @@
+exports.ME="Me",exports.STICKY_ICON="Top",exports.USER_ROLE_TEACHER="Teacher",exports.USER_ROLE_ASSISTANT="Assist",exports.STICKY_IMAGE_SIMPLE="Sticky Message: [image]";

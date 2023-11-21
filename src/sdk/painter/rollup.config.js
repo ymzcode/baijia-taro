@@ -1,0 +1,1 @@
+import babel from"rollup-plugin-babel";import resolve from"rollup-plugin-node-resolve";import commonjs from"rollup-plugin-commonjs";export default{input:"src/Canvas.js",output:{file:"./painter.js",format:"umd",name:"Canvas"},plugins:[babel({babelrc:!0,comments:!0,runtimeHelpers:!0}),resolve({jsnext:!0,main:!0,browser:!0}),commonjs()]};

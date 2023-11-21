@@ -1,0 +1,1 @@
+export default function(t,o,a,r){return{x:Math.floor(t+a*Math.cos(r)),y:Math.floor(o+a*Math.sin(r))}};
