@@ -1,9 +1,9 @@
-var bjy = require('./sdk/bjy');
+var bjy = require('./sdk/bjy.js');
 var eventEmitter = bjy.eventEmitter;
 
 function init(str) {
   bjy.init({
-    env: '',
+    env: 'test',
     apiOrigin: "https://wangrongchen.at.baijiayun.com/",
     sign: "b38c922461439b7f6617bf9f8e755aa6",
     hasDefaultTip: true,

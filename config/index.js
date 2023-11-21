@@ -17,11 +17,26 @@ export default defineConfig(async (merge, { command, mode }) => {
     },
     sourceRoot: 'src',
     outputRoot: 'dist',
-    plugins: [],
+    plugins: [
+      [
+        '@tarojs/plugin-framework-vue3',
+        {
+          vueLoaderOption: {
+            compilerOptions: {
+              isCustomElement: (tag) => tag.includes('baijia-'),
+              whitespace: 'preserve',
+              // ...
+            },
+            reactivityTransform: true, // 开启vue3响应性语法糖
+          },
+        },
+      ]
+    ],
     defineConstants: {
     },
     copy: {
       patterns: [
+        // { from: 'src/sdk/', to: 'dist/sdk/' },
       ],
       options: {
       }
@@ -35,6 +50,9 @@ export default defineConfig(async (merge, { command, mode }) => {
       enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
     },
     mini: {
+      compile: {
+        exclude: [(modulePath) => modulePath.indexOf('/sdk') >= 0],
+      },
       postcss: {
         pxtransform: {
           enable: true,

@@ -1,34 +1,22 @@
 <template>
   <view class="index">
     <text>{{ msg }}</text>
-    <baijia-loading class="loading-wrapper">
-    </baijia-loading>
+
+    <navigator url="/pages/index/loading">
+      <button>loading</button>
+    </navigator>
   </view>
 </template>
 
 <script setup>
 import {ref} from "vue";
-import {useLoad} from "@tarojs/taro";
 
 const msg = ref("Hello World");
-
-
-var util = require('../../utils.js');
-var bjy = require('../../sdk/bjy');
-
-useLoad(() => {
-  util.init()
-})
-
-
 </script>
 
 
 <script>
 definePageConfig({
-  navigationBarTitleText: '首页',
-  "usingComponents": {
-    "baijia-loading": "../../sdk/component/loading/loading"
-  },
+  navigationBarTitleText: '首页'
 })
 </script>
