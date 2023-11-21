@@ -4,16 +4,15 @@
   </view>
 </template>
 
-<script>
-import { ref } from 'vue'
-import './index.scss'
+<script setup>
+import {ref} from "vue";
 
-export default {
-  setup () {
-    const msg = ref('Hello world')
-    return {
-      msg
-    }
-  }
-}
+const msg = ref("Hello World");
+</script>
+
+
+<script>
+definePageConfig({
+  navigationBarTitleText: '首页',
+})
 </script>
