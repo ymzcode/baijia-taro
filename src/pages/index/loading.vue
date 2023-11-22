@@ -1,6 +1,6 @@
 <script setup>
 
-import {useLoad} from "@tarojs/taro";
+import {useLoad, useUnload} from "@tarojs/taro";
 import {reactive} from "vue";
 
 var util = require('../../utils.js');
@@ -17,11 +17,20 @@ const data  = reactive({
 useLoad(() => {
   util.init()
 })
+
+useUnload(() => {
+  bjy.exit()
+})
+
+const roomLoadEnded = () => {
+  bjy.info.tip('进入教室成功');
+}
+
 </script>
 
 <template>
   <view>
-    <baijia-loading :styleInfo="data.options"></baijia-loading>
+    <baijia-loading :styleInfo="data.options" @loadEnded="roomLoadEnded" bindloadEnded></baijia-loading>
   </view>
 </template>
 
