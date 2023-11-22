@@ -5,6 +5,11 @@
     <navigator url="/pages/index/loading">
       <button>loading</button>
     </navigator>
+
+    <navigator url="/pages/index/whiteboard">
+      <button>whiteboard</button>
+    </navigator>
+
   </view>
 </template>
 

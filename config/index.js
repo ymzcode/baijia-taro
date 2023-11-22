@@ -36,7 +36,7 @@ export default defineConfig(async (merge, { command, mode }) => {
     },
     copy: {
       patterns: [
-        // { from: 'src/sdk/', to: 'dist/sdk/' },
+        { from: 'src/sdk/component/whiteboard/image', to: 'dist/sdk/component/whiteboard/image' },
       ],
       options: {
       }
